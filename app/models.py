@@ -1,9 +1,7 @@
 from app import app, db
 
-class Event(db.Model):
+class Contact(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(50))
-    day = db.Column(db.Integer)
-    month = db.Column(db.Integer)
-    year = db.Column(db.Integer)
-    notes = db.Column(db.String(500))
+    name = db.Column(db.String(50))
+    email = db.Column(db.String(100))
+    message = db.Column(db.String(300))
